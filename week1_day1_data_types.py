@@ -51,3 +51,32 @@ print("g 的型態:", type(g))
 h = {1, 2, 3, 4, 5}
 print("h 的值:", h)
 print("h 的型態:", type(h))
+
+# 將更新後的程式碼同步到GitHub
+
+# 當你在本地 VS Code 修改 .py 程式碼（或其他檔案）後，需要進行：
+
+# 存檔程式碼(crtl + s)，此時左邊Changes會多一筆紀錄
+
+# Stage（加入暫存區）
+
+# Commit（提交版本）
+
+# Push（推送到 GitHub）
+
+# 方法一： 使用 VS Code 圖形化操作
+# 左側點「版本控制」圖示（Git 分支圖示）
+# 在「Changes」看到你修改過的檔案
+# 點檔案旁邊【+】將檔案加入暫存區（或直接右鍵 Add All Changes）
+# 上方輸入 Commit 訊息（例如：「更新資料型態範例」）
+# 按上方【✔️】進行 Commit
+# 按【同步變更（Sync Changes）】或【Push】按鈕，將版本推送到 GitHub
+
+# 方法二：用Git CLI 指令
+# git add . （. 表示將所有修改過的檔案加入暫存區）
+
+# 接著輸入：
+# git commit -m "你的 Commit 訊息，例如：修正列表練習錯誤"
+
+# 最後執行：
+# git push
