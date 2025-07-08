@@ -33,12 +33,16 @@ y = iris.target #shape(150,)，150筆資料，每筆資料有1種特徵(0、1、
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # 建立KNN模型
+# 建立 KNN 分類器物件，設定 k=3（使用最近的 3 個鄰居來判斷類別）。
 model = KNeighborsClassifier(n_neighbors=3)
+#  使用訓練集資料（特徵和答案）訓練模型，讓模型學習如何從特徵預測標籤。
 model.fit(X_train, y_train)
 
 # 預測
+# 用已訓練好的模型，對測試集（X_test）進行預測，產生預測結果 y_pred（預測的花的品種）。
 y_pred = model.predict(X_test)
 
 # 評估準確率
+# 計算模型預測結果 y_pred 與測試集正確標籤 y_test 的準確率。
 acc = accuracy_score(y_test, y_pred)
 print(f"模型準確率：{acc:.2f}")
